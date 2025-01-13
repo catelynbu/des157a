@@ -1,13 +1,13 @@
 body{
-    padding: 8% 10%;
+    padding: 4% 10%;
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
-    font-weight: 300;
+    font-weight: 350;
     font-style: normal;
     background-color: #FFFDF9;
     color: #463429;
     background-image: url(images/portal-bgImg.png);
-    background-size: 100vw 120vh;
+    background-size: 100vw 130vh;
     background-repeat: no-repeat;
 }
 
@@ -18,7 +18,7 @@ body{
 }
 
 h1, h2{
-    font-weight: 300;
+    font-weight: 400;
     margin: 0;
 }
 
@@ -62,7 +62,7 @@ a:hover{
 }
 
 section{
-    background-color:rgb(244, 194, 193, 0.4);
+    background-color:rgba(244, 194, 193, 0.61);
     padding: 24px 32px;
     border-radius: 15px;
     flex: 1;
@@ -99,36 +99,40 @@ ul li{
     margin-top: 8px;
 }
 
-#wiggle1{
+#wiggle1, #wiggle2, #wiggle3, #wiggle4{
+    background-repeat: no-repeat;
     position: fixed;
-    bottom: -60px;
-    left: -30px;
-    animation: wiggle 8s infinite;
+    width: 500px;
+    height: 200px;
     z-index: -1;
+    filter: blur(2px);
+    animation: wiggle 8s infinite;
+}
+
+#wiggle1{
+    background-image: url(images/portal-lines1.png);
+    bottom: -50px;
+    left: -30px;
 }
 
 #wiggle2{
-    position: fixed;
+    background-image: url(images/portal-lines2.png);
     top: -60px;
     right: -90px;
-    animation: wiggle 8s infinite;
-    z-index: -1;
 }
 
 #wiggle3{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    animation: wiggle 8s infinite;
-    z-index: -1;
+    background-image: url(images/portal-lines3.png);
+    bottom: 150px;
+    right: -150px;
 }
 
 #wiggle4{
-    position: fixed;
-    top: 0;
-    left: 0;
-    animation: wiggle 8s infinite;
-    z-index: -1;
+    background-image: url(images/portal-lines4.png);
+    width: 600px;
+    height: 200px;
+    top: 150px;
+    left: -240px;
 }
 
 @keyframes wiggle {
@@ -138,7 +142,7 @@ ul li{
     }
     50% {
       transform: translate(-12px, -20px);
-      filter: blur(1px);
+      filter: blur(3px);
     }
     75% {
       transform: translate(10px, 18px);
@@ -150,7 +154,70 @@ ul li{
     }
 }
 
-@media only screen and (min-width: 1200px){
+
+#bg-shape1, #bg-shape2, #bg-shape3{
+    border-radius: 9999px;
+    position: fixed;
+    z-index: -2;
+    filter: blur(10vw);
+}
+
+#bg-shape1{
+    width: 50vw;
+    height: 50vw;
+    top: 0;
+    left: 0;
+    background-color: #F4C2C1;
+    opacity: 0.6;
+    animation: one 14s linear infinite alternate;
+}
+
+#bg-shape2{
+    width: 70vw;
+    height: 70vw;
+    top: 500px;
+    right: -200px;
+    background-color: #FFE7CB;
+    opacity: 0.6;
+    animation: two 14s linear infinite alternate;
+}
+
+#bg-shape3{
+    width: 40vw;
+    height: 40vw;
+    top: -100px;
+    right: -200px;
+    background-color: #FADADD;
+    animation: three 14s linear infinite alternate;
+}
+
+@keyframes one{
+    0%{left: -5vw; top: 0vw;}
+    25%{left: 10vw; top: 10vw;}
+    50%{left: 0vw; top: 0vw;}
+    75%{left: 15vw; top: 10vw;}
+    100%{left: 0vw; top: 0vw;}
+}
+
+@keyframes two{
+    0%{right: -5vw; top: 40vw;}
+    25%{right: 10vw; top: 50vw;}
+    50%{right: 0vw; top: 40vw;}
+    75%{right: 15vw; top: 55vw;}
+    100%{right: 0vw; top: 45vw;}
+}
+
+@keyframes three{
+    0%{right: -5vw; top: -10vw;}
+    25%{right: 10vw; top: 5vw;}
+    50%{right: 0vw; top: -10vw;}
+    75%{right: -5vw; top: 5vw;}
+    100%{right: 0vw; top: -10vw;}
+}
+
+
+
+@media only screen and (min-width: 1100px){
     #container{
         flex-direction: row;
         justify-content: space-around;
