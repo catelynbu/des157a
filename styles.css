@@ -6,7 +6,7 @@ body{
     background-color: #FFFDF9;
     color: #463429;
     background-image: url(images/portal-bgImg.png);
-    background-size: 100vw 130vh;
+    background-size: 180% 180%;
     background-repeat: no-repeat;
 }
 
@@ -51,6 +51,7 @@ a:hover{
 
 #main-text{
     text-align: center;
+    margin-top: 72px;
 }
 
 #projects{
@@ -67,7 +68,7 @@ section{
     flex: 1;
     transition: 1s;
     border: 2px #FFF5E3 solid;
-    min-width: 200px;
+    min-width: 220px;
 }
 
 section:hover{
