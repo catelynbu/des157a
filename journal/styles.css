@@ -1,5 +1,5 @@
 body{
-    padding: 0 10% 4%;
+
     background-color: #202020;
     color: #ececec;
     font-family: "DM Sans", serif;
@@ -11,6 +11,10 @@ body{
 }
 
 
+main, footer{
+    padding: 0 10% 4%;
+}
+
 header{
     text-align: left;
     position: sticky;
@@ -18,10 +22,15 @@ header{
     background-color: #202020;
     height: fit-content;
     padding: 4% 0;
+    z-index: 2;
+}
+
+#headerPadding{
+    padding: 0 10%;
 }
 
 h1{
-    font-size: 3.4em;
+    font-size: 3.1em;
 }
 
 h2{
@@ -124,9 +133,13 @@ footer{
         margin-right: 72px;
     }
 
-    /* h1{
-        font-size: 4em;
-    } */
+    body{
+        padding: 0 10% 4%;
+    }
+
+    main, footer{
+        padding: 0;
+    }
 
 }
 
