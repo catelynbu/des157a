@@ -12,7 +12,7 @@ body{
 
 
 main, footer{
-    padding: 0 10% 4%;
+    padding: 8% 10% 4%;
 }
 
 header{
@@ -23,10 +23,13 @@ header{
     height: fit-content;
     padding: 4% 0;
     z-index: 2;
+    max-width: 640px;
+    margin: auto;
 }
 
 #headerPadding{
     padding: 0 10%;
+
 }
 
 h1{
@@ -130,7 +133,11 @@ footer{
         position: sticky;
         top: 40vh;
         height: fit-content;
-        margin-right: 72px;
+        margin: 0 72px 0 0;
+    }
+
+    #headerPadding{
+        padding: 0;
     }
 
     body{
@@ -149,4 +156,5 @@ footer{
     h1{
         font-size: 5em;
     }
+    
 }
