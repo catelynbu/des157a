@@ -25,9 +25,11 @@ h1{
     font-size: 3em;
 }
 
-p{
-    margin: 0;
+main p{
+    margin-right: auto;
     line-height: 1.8em;
+    max-width: 900px;
+    padding: 40px 0;
 }
 
 a{
@@ -64,7 +66,7 @@ section{
     flex: 1;
     max-width: 700px;
     min-width: 300px;
-    margin: auto;
+    justify-content: space-between;
     display: flex;
     flex-direction: column;
     gap: 12px;
