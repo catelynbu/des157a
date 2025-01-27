@@ -11,6 +11,15 @@
             text-align: center;
             padding-top: 100px;
         }
+
+        p{
+            font-size: 1.3em;
+        }
+
+        h1{
+            font-size: 3em;
+        }
+
     </style>
 </head>
 
@@ -49,7 +58,7 @@
                 
 
                 var message = document.querySelector('h2');
-                message.innerHTML = `<h2>You chose ${colorPick}.</p>` + '<p>You are correct!</h2>';
+                message.innerHTML = `<h2>You chose ${colorPick}.</h2>` + '<h2>You are correct!</h2>';
 
                 if(randomColor === 'red'){
                 document.querySelector('body').style.backgroundColor = "#fa6161";
