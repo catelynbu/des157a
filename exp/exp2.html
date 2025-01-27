@@ -9,6 +9,7 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
+            padding-top: 100px;
         }
     </style>
 </head>
@@ -17,16 +18,13 @@
 <body>
     <!-- Prompt the user for a color that the computer is "thinking of" - either red, yellow, green, or blue. Then pick a random color from an array. If the color entered by the user matches the color picked by the program, it displays the output message "You are right!". Otherwise, it displays "Try again!". (Credit: Krithika Govind) -->
 
-    <!-- the correct answer to the prompt can be found in the console -->
+    <!-- if the player answers the prompt with the wrong guess, the program will pick another color, excluding the original first color choice, and tell the player that the secondary color was their second choice and then will ask them if they were close. The program's "inner thoughts" can be seen through the console. -->
+
+    <h1>Experiment 2</h1>
 
 
-    <!-- add ons: the program has a "second" choice. it will say "I almost choose that one" or "I almost choose blue" or "x color was my x choice" 
-    
-    that wasnt any of the options!
-    -->
-
-    <h1>Experiment 1</h1>
-    <div></div>
+    <h2></h2>
+    <p></p>
 
     <script>
         var colorPick = prompt("Which color am I thinking of? Red, Yellow, Green, or Blue?").toLowerCase();
@@ -43,13 +41,15 @@
         }
 
         function yourColor(color){
-            var randomColor = color[randomInt(0, color.length-1)];
+            var randomColor = colorOptions[randomInt(0, colorOptions.length-1)];
+            
            
             if(colorPick === randomColor){
                 console.log(`I'm thinking of ${randomColor}.`);
+                
 
-                var message = document.querySelector('div');
-                message.innerHTML = `<p>You chose ${colorPick}.</p>` + '<p>You are correct!</p>';
+                var message = document.querySelector('h2');
+                message.innerHTML = `<h2>You chose ${colorPick}.</p>` + '<p>You are correct!</h2>';
 
                 if(randomColor === 'red'){
                 document.querySelector('body').style.backgroundColor = "#fa6161";
@@ -68,8 +68,21 @@
             else{
                 console.log(`I'm thinking of ${randomColor}.`);
 
-                var message = document.querySelector('div');
-                message.innerHTML = `<p>You chose ${colorPick}.</p>` + '<p>You are wrong, try again!</p>';
+                var message = document.querySelector('h2');
+                message.innerHTML = `<h2>You chose ${colorPick}. You are wrong, try again!</h2>`;
+                console.log(`And you chose ${colorPick}.`);
+
+                // removing the correct answer from the new array
+                var index = colorOptions.indexOf(randomColor);
+                colorOptions.splice(index, 1);
+
+                //chosing the second option
+                var secondChoice = colorOptions[randomInt(0, colorOptions.length-1)];
+                console.log(`But my second choice was ${secondChoice}!`);
+                console.log(colorOptions);
+
+                var message2 = document.querySelector('p');
+                message2.innerHTML = `<p>I almost picked ${secondChoice}! We're you close? hehehe</p>`;
             }
 
         }
