@@ -5,24 +5,66 @@ body{
     
 }
 
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 42px;
+}
+
+main{
+    margin: 100px 0;
+}
+
+img{
+    display: block;
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+    margin: auto;
+}
+
 h1{
     font-family: "Cherry Bomb One", serif;
     text-align: center;
+    font-size: 5em;
+    padding: 0 4%;
+}
+
+button{
+    background-color: #480D0D;
+    padding: 8px 20px;
+    border-radius: 100px;
+    color: white;
+    font-family: "Cherry Bomb One", serif;
+    font-size: 1.2em;
 }
 
 form{
     display: flex;
     flex-direction: column;
     max-width: 700px;
-    /* background-color: cadetblue; */
     gap: 42px;
 
 }
 
+input{
+    background-color: #FFFBFB;
+    height: 32px;
+    border-radius: 10px;
+    border: solid 2px #FFD7D7;
+    padding: 0 8px;
+}
+   
+
+input[type=text]:focus {
+    border: red solid 2px;
+  }
+
 #questions{
     display: flex;
     flex-wrap: wrap;
-    gap: 42px;
+    gap: 20px;
     justify-content: space-between;
 }
 
@@ -38,13 +80,63 @@ form{
 }
 
 
-/* #questions{
-    display: flex;
-    flex-direction: column;
-} */
-
 #madlibs-questions{
     display: flex;
     justify-content: center;
-    /* background-color: lavender; */
+}
+
+#lace-top{
+    background-image: url(images/lace.png);
+    height: 120px;
+    width: 100vw;
+    position: fixed;
+    rotate: 180deg;
+    top: -28px;
+    /* z-index: -1; */
+}
+
+#lace-bottom{
+    background-image: url(images/lace.png);
+    height: 120px;
+    width: 100vw;
+    position: fixed;
+    bottom: -28px;
+    /* z-index: -1; */
+}
+
+@media only screen and (min-width: 460px){
+    img{
+        width: 30vw;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    #container{
+        flex-direction: row;
+        padding: 0 4vw;
+        align-items: center;
+    }
+
+    img{
+        width: 25vw;
+    }
+
+
+    #questions{
+        justify-content: space-between;
+    }
+}
+
+
+@media only screen and (min-width: 1320px){
+    #container{
+        flex-direction: row;
+        padding: 0 10vw;
+        gap: 100px;
+    }
+
+    img{
+        width: 20vw;
+        margin: 0;
+    }
 }
