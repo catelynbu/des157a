@@ -1,0 +1,50 @@
+body{
+    background-image:url(images/madlibs-bg.jpg);
+    font-family: "Jua", serif;
+    color: #480D0D;
+    
+}
+
+h1{
+    font-family: "Cherry Bomb One", serif;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    /* background-color: cadetblue; */
+    gap: 42px;
+
+}
+
+#questions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 42px;
+    justify-content: space-between;
+}
+
+.fields{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 8px;
+}
+
+#submit-button{
+    margin-left: auto;
+}
+
+
+/* #questions{
+    display: flex;
+    flex-direction: column;
+} */
+
+#madlibs-questions{
+    display: flex;
+    justify-content: center;
+    /* background-color: lavender; */
+}
