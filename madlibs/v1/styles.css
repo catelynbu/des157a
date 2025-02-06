@@ -56,7 +56,6 @@ form{
     flex-direction: column;
     max-width: 700px;
     gap: 42px;
-
 }
 
 input{
@@ -66,18 +65,19 @@ input{
     border: solid 2px #FFD7D7;
     padding: 0 8px;
     width: 160px;
+    color: #480D0D;
 }
    
 
-/* input[type=text]:focus {
+input[type=text]:focus {
     border: red solid 2px;
-} */
+}
 
 #questions{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
+    gap: 32px;
+    justify-content: center;
 }
 
 .fields{
@@ -87,8 +87,8 @@ input{
     gap: 8px;
 }
 
-#submit-button{
-    margin-left: auto;
+.submit-button{
+    margin: auto;
     
 }
 
@@ -98,12 +98,11 @@ input{
     justify-content: center;
     padding: 0 2%;
     display: block;
+    margin: auto;
 }
 
 
 #madlibs-output{
-    
-
     max-width: 700px;
     background-color: rgb(255, 251, 251, 0.6);
     border: #FFD7D7 solid 2px;
@@ -125,28 +124,23 @@ input{
 
 #lace-top{
     background-image: url(images/lace.png);
-    height: 120px;
+    height: 90px;
     width: 100vw;
     position: fixed;
     transform: rotate(180deg);
     top: -28px;
-    /* z-index: -1; */
+
 }
 
 #lace-bottom{
     background-image: url(images/lace.png);
-    height: 120px;
+    height: 90px;
     width: 100vw;
     position: fixed;
     bottom: -28px;
-    /* z-index: -1; */
+
 }
 
-/* @media only screen and (min-width: 460px){
-    img{
-        width: 30vw;
-    }
-} */
 
 @media only screen and (min-width: 1000px){
     h1{
@@ -159,17 +153,20 @@ input{
 
     #container{
         flex-direction: row;
-        padding: 0 4vw;
+        padding: 2vw 4vw 0;
         align-items: center;
+    }
+
+    #questions{
+        gap: 48px;
     }
 
     img{
         width: 25vw;
     }
 
-
-    #questions{
-        justify-content: space-between;
+    #madlibs-questions{
+        margin: 0;
     }
 
     #madlibs-output p{
@@ -180,14 +177,15 @@ input{
 
 
 @media only screen and (min-width: 1320px){
-    #container{
-        flex-direction: row;
-        padding: 0 10vw;
-        gap: 100px;
-    }
 
     img{
         width: 20vw;
         margin: 0;
     }
+
+    #lace-top, #lace-bottom{
+        height: 120px;
+    
+    }
+
 }
