@@ -8,6 +8,7 @@
     const outputSection = document.querySelector('#madlibs-output');
     const formData = document.querySelectorAll('input[type=text]');
     const errorBox = document.querySelector('#message');
+    const again = document.querySelector('#again');
 
     
 
@@ -63,7 +64,7 @@
         here.innerHTML =  myText;
     }
 
-    outputSection.addEventListener('click', function(event){
+    again.addEventListener('click', function(event){
         event.preventDefault();
         questionsSection.style.display = 'block';
         outputSection.style.display = 'none';
