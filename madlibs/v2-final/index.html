@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- normalize css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"> 
+
+    <!-- font awesone icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Jua&display=swap" rel="stylesheet">
+
+    <link href="styles.css" rel="stylesheet">
+
+    <title>Let's Bake A Cake | Madlibs</title>
+
+    <script src="script.js" defer></script>
+    
+</head>
+
+
+<body>
+    <main>
+        <header>
+            <h1>Let's Bake A Cake!</h1>
+        </header>
+        
+        <div id="container">
+            <img src="images/cake.png" alt="A white cake with pink strawberry filling and straberries on top drawn in a pixel art style" width="558" height="440">
+
+
+            <section id="madlibs-questions">
+                <form autocomplete="off">
+                    <div id="questions">
+                        <div class="fields">
+                            <label for="place">place</label>
+                            <input type="text" id="place">
+                        </div>
+
+                        <div class="fields">
+                            <label for="verb1">verb</label>
+                            <input type="text" id="verb1" >
+                        </div>
+
+                        <div class="fields">
+                            <label for="verb2">verb</label>
+                            <input type="text" id="verb2">
+                        </div>
+
+                        <div class="fields">
+                            <label for="verb3">verb</label>
+                            <input type="text" id="verb3">
+                        </div>
+
+                        <div class="fields">
+                            <label for="verb4">verb</label>
+                            <input type="text" id="verb4">
+                        </div>
+
+                        <div class="fields">
+                            <label for="number">number</label>
+                            <input type="text" id="number" >
+                        </div>
+                        
+                        <div class="fields">
+                            <label for="noise">noise</label>
+                            <input type="text" id="noise" >
+                        </div>
+
+                        <div class="fields">
+                            <label for="color">color</label>
+                            <input type="text"  id="color">
+                        </div>
+
+
+                        <div class="fields">
+                            <label for="adjective">adjective</label>
+                            <input type="text" id="adjective" >
+                        </div>
+                    </div>
+
+                    <div class="submit-button">
+                        <button type="submit">submit <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </form>
+                <div id="message"></div>
+            </section>
+
+            <section id="madlibs-output">
+                <div id="puthere"></div>
+
+                <div class="submit-button" id="again">
+                    <button type="submit"><i class="fas fa-arrow-left"></i> again!</button>
+                </div>
+            </section>
+        </div>
+
+       
+    </main>
+   
+    <div id="lace-top"></div>
+    <div id="lace-bottom"></div>
+
+</body>
+
+
+
+</html>
