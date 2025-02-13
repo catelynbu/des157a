@@ -10,6 +10,20 @@ body{
     font-size: 1.1em;
 }
 
+img{
+    display: block;
+    width: 70%;
+    height: auto;
+    margin: auto;
+    padding: 20px 20px 8px;
+}
+
+figcaption{
+    text-align: center;
+    font-size: .9em;
+    color: #FF7597;
+}
+
 
 main, footer{
     padding: 8% 10% 4%;
@@ -89,7 +103,7 @@ article{
     background-color: rgba(102, 102, 102, 0.205);
     padding: 4%;
     border-radius: 15px;
-    max-width: 640px;
+    max-width: 700px;
     margin: auto;
     box-shadow: 0px 0px 12px 0px rgba(255, 255, 255, 0.096);
     transition: transform 1s;
@@ -156,5 +170,7 @@ footer{
     h1{
         font-size: 5em;
     }
+
+    
     
 }
