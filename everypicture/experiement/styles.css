@@ -1,0 +1,59 @@
+body{
+    text-align: center;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+img{
+    display: block;
+    width: 400px;
+    height: auto;
+}
+
+#photo1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+#box{
+    border: 1px solid cadetblue;
+    width: 500px;
+    height: fit-content;
+    padding: 20px;
+}
+
+#card1{
+    width: fit-content;
+}
+
+#card1:hover{
+    animation: develop .5s ease;
+    animation-iteration-count: 6;
+
+}
+
+#black{
+    position: absolute;
+    z-index: 1;
+    
+}
+
+#black:hover{
+    opacity: 0;
+    transition: ease-in-out 5s;
+    
+}
+
+#fill{
+    position: relative;
+}
+
+@keyframes develop {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
