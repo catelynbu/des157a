@@ -1,0 +1,74 @@
+body{
+    text-align: center;
+    margin: auto;
+    font-family: sans-serif;
+    background-image: url(images/greenbg.jpg);
+    
+}
+
+#polaroid-container{
+    display: flex;
+    justify-content: center;
+    gap: 42px;
+}
+
+img{
+    display: block;
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+#polaroid1, #polaroid2, #polaroid3{
+    width: fit-content;
+}
+
+#polaroid1:hover, #polaroid2:hover, #polaroid3:hover{
+    animation: develop .5s ease;
+    animation-iteration-count: 6;
+
+}
+
+.black{
+    position: absolute;
+    z-index: 1;
+    
+}
+
+.black:hover{
+    opacity: 0;
+    transition: ease-in-out 5s;
+    
+}
+
+.fill{
+    position: relative;
+}
+
+@keyframes develop {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+#paper-top{
+    background-image: url(images/paper-top.png);
+    height: 90px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-repeat: no-repeat;
+
+}
+
+#paper-bottom{
+    background-image: url(images/paper-btm.png);
+    height: 200px;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    background-repeat: no-repeat;
+}

@@ -6,7 +6,7 @@ body{
     background-color: #FFFDF9;
     color: #463429;
     background-image: url(images/portal-bgImg.png);
-    background-size: 180% 180%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
