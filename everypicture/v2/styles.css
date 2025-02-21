@@ -1,0 +1,133 @@
+body{
+    text-align: center;
+    margin: auto;
+    font-family: sans-serif;
+    background-image: url(images/greenbg.jpg);
+    font-family: "Gentium Plus", serif;
+    font-weight: 400;
+    color: #322318;
+    line-height: 1.5em;
+}
+
+header{
+    margin-top: 60px;
+    padding: 2% 0 ;
+}
+
+h1, h2{
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    color: #334035;
+}
+
+h1{
+    font-size: 2.5em;
+}
+
+#polaroid-container{
+    display: flex;
+    justify-content: center;
+    gap: 42px;
+    padding: 4% 0 0 0;
+}
+
+img{
+    display: block;
+    /* width: 350px;
+    height: auto; */
+    border-radius: 15px;
+}
+
+
+#polaroid1, #polaroid2, #polaroid3{
+    width: fit-content;
+}
+
+#polaroid1, #polaroid1:hover{
+    transform: rotate(-10deg) translate(0, -30px);
+}
+
+#polaroid2{
+    transform: rotate(-2deg);
+}
+
+#polaroid3{
+    transform: rotate(5deg) translate(0, -20px);
+}
+
+#polaroid1:hover, #polaroid2:hover, #polaroid3:hover{
+    animation: develop .5s ease;
+    animation-iteration-count: 6;
+}
+
+.black{
+    position: absolute;
+    z-index: 1;
+    width: 250px;
+    height: auto;
+    transition: ease-in-out 4s;
+    
+}
+
+/* .black:hover{
+    opacity: 0;
+    transition: ease-in-out 5s;
+    
+
+    
+} */
+
+.fill{
+    position: relative;
+    width: 250px;
+    height: auto;
+    transition: ease-in-out 4s;
+}
+
+@keyframes develop {
+    0% { transform:  rotate(0deg); }
+    25% { transform:  rotate(5deg); }
+    50% { transform:  rotate(0eg); }
+    75% { transform:  rotate(-5deg); }
+    100% { transform:  rotate(0deg); }
+}
+
+
+button{
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    padding: 10px;
+    cursor: pointer;
+    color: #322318;
+}
+
+section{
+    background-color: white;
+    max-width: 500px;
+    border-radius: 25px;
+    padding: 40px;
+    display: flex;
+    text-align: left;
+    align-items: flex-start;
+}
+
+#paper-top{
+    background-image: url(images/paper-top.png);
+    height: 90px;
+    width: 100vw;
+    position: fixed;
+    top: -10px;
+    background-repeat: no-repeat;
+
+}
+
+#paper-bottom{
+    background-image: url(images/paper-btm.png);
+    height: 150px;
+    width: 1200px;
+    position: fixed;
+    bottom: -10px;
+    right: -30px;
+    background-repeat: no-repeat;
+}
