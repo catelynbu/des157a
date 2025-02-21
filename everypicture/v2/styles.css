@@ -119,6 +119,24 @@ button{
     color: #322318;
 }
 
+#restart{
+    padding: 4px 20px;
+    background-color: #322318;
+    color: white;
+    border-radius: 100px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 100px;
+    z-index: 3;
+    transition: ease-in-out 200ms;
+}
+
+#restart:hover{
+    background-color: #979789;
+    /* color: #322318; */
+}
+
 section{
     background-color: white;
     max-width: 500px;

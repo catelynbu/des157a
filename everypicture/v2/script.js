@@ -3,8 +3,8 @@
     console.log('reading js');
 
     const pic1 = document.querySelector('#polaroid1');
-    const pic2 = document.querySelector('#polaroid2');
-    const pic3 = document.querySelector('#polaroid3');
+    const pic2 = document.querySelector('.polaroid2');
+    const pic3 = document.querySelector('.polaroid3');
 
 
     const noblack = document.querySelector('.no-black');
@@ -14,9 +14,12 @@
 
     const bghide = document.querySelector('#cover');
 
+    //youre gonna have to make this a class and loop it somehow..
     const close = document.querySelector('button');
+    const restart = document.querySelector('#restart');
 
-    
+
+
     pic1.addEventListener('mouseover', function(event){
         event.preventDefault();
 
@@ -61,14 +64,25 @@
         console.log('im begging you nicely');
 
         //get rid of the cover, change back the size, get rid of pop-up
-        black.style.width = '300px';
-        fill.style.width = '300px';
+        black.style.width = '250px';
+        fill.style.width = '250px';
         caption1.style.display = 'none';
         bghide.style.opacity = '0';
 
     })
     
+    restart.addEventListener('click', function(event){
+        event.preventDefault();
 
+        console.log('this should reset all the values! please..');
+
+        black.style.width = '250px';
+        fill.style.width = '250px';
+        caption1.style.display = 'none';
+        bghide.style.opacity = '0';
+        black.style.opacity = '1';
+
+    })
 
 
 
