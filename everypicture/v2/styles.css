@@ -33,31 +33,30 @@ h1{
 
 img{
     display: block;
-    /* width: 350px;
-    height: auto; */
     border-radius: 15px;
 }
 
-
-#polaroid1, #polaroid2, #polaroid3{
-    width: fit-content;
-}
-
-#polaroid1, #polaroid1:hover{
+#polaroid1{
     transform: rotate(-10deg) translate(0, -30px);
+    z-index: 2;
 }
 
-#polaroid2{
-    transform: rotate(-2deg);
-}
-
-#polaroid3{
-    transform: rotate(5deg) translate(0, -20px);
-}
-
-#polaroid1:hover, #polaroid2:hover, #polaroid3:hover{
+.shake{
     animation: develop .5s ease;
     animation-iteration-count: 6;
+}
+
+.no-shake{
+    animation: none;
+
+}
+
+@keyframes develop {
+    0% { transform:  rotate(0deg) translate(0, -30px); }
+    25% { transform:  rotate(5deg) translate(0, -30px); }
+    50% { transform:  rotate(0eg) translate(0, -30px); }
+    75% { transform:  rotate(-5deg) translate(0, -30px); }
+    100% { transform:  rotate(0deg) translate(0, -30px); }
 }
 
 .black{
@@ -65,16 +64,30 @@ img{
     z-index: 1;
     width: 250px;
     height: auto;
+
+    opacity: 1;
+
     transition: ease-in-out 4s;
     
 }
 
-/* .black:hover{
-    opacity: 0;
-    transition: ease-in-out 5s;
-    
+/* .no-black{
+    position: absolute;
+    z-index: 1;
+    width: 250px;
+    height: auto;
 
-    
+    opacity: 0;
+
+    transition: ease-in-out 4s;
+} */
+
+/* .hidden{
+    opacity: 0;
+}
+
+.show{
+    opacity: 100;
 } */
 
 .fill{
@@ -84,14 +97,18 @@ img{
     transition: ease-in-out 4s;
 }
 
-@keyframes develop {
-    0% { transform:  rotate(0deg); }
-    25% { transform:  rotate(5deg); }
-    50% { transform:  rotate(0eg); }
-    75% { transform:  rotate(-5deg); }
-    100% { transform:  rotate(0deg); }
-}
 
+
+#cover{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #32231867;
+    transition: ease-in-out 4s;
+    opacity: 0;
+    
+}
 
 button{
     background-color: transparent;
@@ -107,9 +124,17 @@ section{
     max-width: 500px;
     border-radius: 25px;
     padding: 40px;
-    display: flex;
     text-align: left;
     align-items: flex-start;
+    z-index: 2;
+    position: fixed;
+    top: 40vh;
+    left: 50vw;
+    transition: ease-in-out 2s;
+
+    /* if you want the pop-up to fade in then you need to use opacity and then display none the button cries */
+    display: none;
+
 }
 
 #paper-top{
@@ -119,7 +144,7 @@ section{
     position: fixed;
     top: -10px;
     background-repeat: no-repeat;
-
+    z-index: 2;
 }
 
 #paper-bottom{
@@ -130,4 +155,6 @@ section{
     bottom: -10px;
     right: -30px;
     background-repeat: no-repeat;
+    z-index: 2;
 }
+
