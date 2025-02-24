@@ -2,60 +2,66 @@
     'use strict'
     console.log('reading js');
 
-    const pic1 = document.querySelector('#polaroid1');
-    const pic2 = document.querySelector('.polaroid2');
-    const pic3 = document.querySelector('.polaroid3');
-
-
-    const noblack = document.querySelector('.no-black');
-    const black = document.querySelector('.black');
-
-    const fill = document.querySelector('.fill');
+    const polaroid = document.querySelectorAll('.polaroid');
+    const black = document.querySelectorAll('.black');
+    const fill = document.querySelectorAll('.fill');
 
     const bghide = document.querySelector('#cover');
-
-    //youre gonna have to make this a class and loop it somehow..
     const close = document.querySelector('button');
-    const restart = document.querySelector('#restart');
+    const caption1 = document.querySelector('#caption1');
 
 
 
-    pic1.addEventListener('mouseover', function(event){
-        event.preventDefault();
 
-        pic1.style.border= '3px solid red';
+    for (let i=0; i<polaroid.length; i++){
+        polaroid[i].addEventListener('mouseover', function(event){
+            // console.log('PLEASE WORK')
 
-        pic1.className = 'shake';
-        black.style.opacity = '0';
-        black.style.width = '350px';
-        fill.style.width = '350px';
+            //class name might have to change to classlist if we need to keep the polaroid invdividual ids
+            polaroid[i].className = 'shake';
+            black[i].style.opacity = '0';
+            black[i].classList.add('grow');
+            fill[i].classList.add('grow');
+            
+            if(polaroid[0].className = 'shake'){
+                console.log('heya')
+
+                bghide.style.opacity = '1';
+                
+                caption1.style.display = 'flex';
+
+                black[1].classList.remove('grow');
+                fill[1].classList.remove('grow');
+                black[1].classList.add('shrink');
+                fill[1].classList.add('shrink');
+                polaroid[1].classList.remove = ('shake');
+
+                black[2].classList.remove('grow');
+                fill[2].classList.remove('grow');
+                black[2].classList.add('shrink');
+                fill[2].classList.add('shrink');
 
 
-        //if the black polaroid is gone then cover the bg and bring up pop-up
-        // do we need the if statement?
-        if( black.style.opacity = '0'){
-            console.log('i think we are onto something');
-            bghide.style.opacity = '1';
-    
-            //eventually the polaroid should stop shaking
+                // polaroid[1].style.display = 'none';
 
-            const caption1 = document.querySelector('#caption1');
+                // polaroid[0].style.border = 'solid red 3px'
+                // polaroid[2].style.opacity = '0';
 
-            caption1.style.display = 'flex';
+                // if(polaroid[2].style.opacity = '0'){
+                //     console.log('poopoo');
+                //     polaroid[2].classList.remove('shake');
+                //}
+            }
 
+        })
 
-        }
+        polaroid[i].addEventListener('mouseout', function(event){
+            console.log('um the cursor is off HELLOO')
 
-    })
+            polaroid[i].className = 'no-shake';
 
-    pic1.addEventListener('mouseout', function(event){
-        event.preventDefault();
-
-        pic1.style.border= '3px solid blue';
-
-        pic1.className = 'no-shake';
-        
-    })
+        })
+    }
 
 
     close.addEventListener('click', function(event){
@@ -64,23 +70,12 @@
         console.log('im begging you nicely');
 
         //get rid of the cover, change back the size, get rid of pop-up
-        black.style.width = '250px';
-        fill.style.width = '250px';
+        // black.style.width = '250px';
+        // fill.style.width = '250px';
         caption1.style.display = 'none';
         bghide.style.opacity = '0';
 
-    })
-    
-    restart.addEventListener('click', function(event){
-        event.preventDefault();
-
-        console.log('this should reset all the values! please..');
-
-        black.style.width = '250px';
-        fill.style.width = '250px';
-        caption1.style.display = 'none';
-        bghide.style.opacity = '0';
-        black.style.opacity = '1';
+        //run defualt function. so you need to make a defualt function lmao
 
     })
 
