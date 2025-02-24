@@ -27,8 +27,8 @@ h1{
 #polaroid-container{
     display: flex;
     justify-content: center;
-    gap: 72px;
-    padding: 4% 0 0 0;
+    gap: 150px;
+    padding: 20px 0;
 }
 
 img{
@@ -37,17 +37,17 @@ img{
 }
 
 #polaroid1{
-    transform: rotate(-10deg) translate(0, -30px);
+    transform: rotate(-12deg);
     z-index: 2;
 }
 
 #polaroid2{
-    transform: rotate(90deg);
+    transform: rotate(1deg);
     z-index: 2;
 }
 
 #polaroid3{
-    transform: rotate(-10deg) translate(0, -30px);
+    transform: rotate(7deg);
     z-index: 2;
 }
 
@@ -67,11 +67,11 @@ img{
 }
 
 @keyframes develop {
-    0% { transform:  rotate(0deg) translate(0, -30px); }
-    25% { transform:  rotate(5deg) translate(0, -30px); }
-    50% { transform:  rotate(0eg) translate(0, -30px); }
-    75% { transform:  rotate(-5deg) translate(0, -30px); }
-    100% { transform:  rotate(0deg) translate(0, -30px); }
+    0% { transform:  rotate(0deg) }
+    25% { transform:  rotate(5deg) }
+    50% { transform:  rotate(0deg)}
+    75% { transform:  rotate(-5deg)}
+    100% { transform:  rotate(0deg)}
 }
 
 .black{
@@ -141,20 +141,29 @@ button{
 
 section{
     background-color: white;
-    max-width: 500px;
+    max-width: 300px;
     border-radius: 25px;
-    padding: 40px;
+    padding: 30px;
     text-align: left;
     align-items: flex-start;
     z-index: 2;
-    position: fixed;
-    top: 40vh;
-    left: 50vw;
     transition: ease-in-out 2s;
+    opacity: 0;
+    display: flex;    
+}
 
-    /* if you want the pop-up to fade in then you need to use opacity and then display none the button cries */
-    display: none;
+.caption{
+    display: flex;
+}
 
+#caption-container{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+section h2, section p{
+    margin: 0;
 }
 
 #paper-top{
@@ -172,9 +181,10 @@ section{
     height: 150px;
     width: 1200px;
     position: fixed;
-    bottom: -10px;
+    bottom: -30px;
     right: -30px;
     background-repeat: no-repeat;
     z-index: 2;
+    transform: rotate(3deg);
 }
 
