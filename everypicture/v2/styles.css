@@ -162,7 +162,7 @@ section{
     justify-content: center;
 }
 
-section h2, section p{
+section h2{
     margin: 0;
 }
 
@@ -173,7 +173,7 @@ section h2, section p{
     position: fixed;
     top: -10px;
     background-repeat: no-repeat;
-    z-index: 2;
+    z-index: 1;
 }
 
 #paper-bottom{
@@ -184,7 +184,7 @@ section h2, section p{
     bottom: -30px;
     right: -30px;
     background-repeat: no-repeat;
-    z-index: 2;
+    z-index: 1;
     transform: rotate(3deg);
 }
 
