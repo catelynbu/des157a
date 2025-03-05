@@ -1,0 +1,83 @@
+body{
+    padding: 4% 8%;
+    font-family: "Montserrat", serif;
+    font-weight: 350;
+    font-style: normal;
+    background-color: #FFFDF9;
+    color: #463429;
+    background-image: url(../images/portal-bgImg.png);
+    background-size: 180% 180%;
+    background-repeat: no-repeat;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+
+h1, h2{
+    font-weight: 400;
+    margin: 0;
+}
+
+h1{
+    font-size: 3em;
+}
+
+main p{
+    margin-right: auto;
+    line-height: 1.8em;
+    max-width: 900px;
+    padding: 40px 0;
+}
+
+a{
+    text-decoration: none;
+    border-radius: 100px;
+    transition: 0.5s;
+    color: #e95d6b;
+}
+
+a:hover{
+    transition: 0.5s;
+    color: #ff8c20;
+    font-weight: 600;
+
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+main{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+section{
+    background-color:rgba(244, 194, 193, 0.25);
+    padding: 24px;
+    border-radius: 15px;
+    flex: 1;
+    max-width: 700px;
+    min-width: 300px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+footer{
+    border-top: 1px solid rgb(119, 119, 119);
+    margin-top: 42px;
+}
+
+#flex{
+    display: flex;
+    gap: 36px;
+}
