@@ -31,6 +31,11 @@ li, p{
 
 main{
     display: flex;
+    max-height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 
@@ -50,15 +55,25 @@ button:hover{
     cursor: pointer;
 }
 
+#start{
+    border-radius: 1000px;
+    padding: 50px 20px;
+    border: solid 4px #704436;
+    background-color: #F8DEDF;
+    color: #704436;
+}
+
+
+
 
 /* sidebar */
 #sidebar{
     background-color: cadetblue;
-    width: 450px;
+    width: 25vw;
     padding: 40px;
     height: 100vh;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 40px;
 }
@@ -133,26 +148,70 @@ button:hover{
 
 
 
+
+/* playmat */
 #playmat{
     background-image: url(images/playmat.png);
     margin: auto;
-    width: 630px;
-    height: 630px;
+    width: 55vw;
+    height: 55vw;
+    max-width: 800px;
+    max-height: 800px;
     border: solid 5px #704436;
     border-radius: 20px;
 }
 
 
+
 /* title screen */
 #title-screen{
-    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+#title-screen span{
+    font-size: 1.8em;
+    margin: 0 20px;
+}
+
+#title-screen p{
+    font-size: 1.3em;
+}
+
+#title-characters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 240px;
+}
+
+#title-text{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#title-tag{
+    border: #704436 solid 2px;
+    border-radius: 100px;
+    padding: 8px 12px;
+    width: fit-content;
+    margin: auto;
+    background-color: #f8dedf6c;
 }
 
 
 /* ending screen */
 #ending{
+    display: none;
+
     text-align: center;
-    display: flex;
     flex-direction: column;
     gap: 36px;
     align-items: center;
