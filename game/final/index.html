@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- normalize css -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"> 
+
+     <!-- font awesone icons -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+ 
+     <!-- google fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Sacramento&display=swap" rel="stylesheet">
+ 
+     <link href="styles.css" rel="stylesheet">
+
+     <script src="script.js" defer></script>
+
+    <title>Game On! Rilakkuma vs. Korilakkuma</title>
+</head>
+
+<body>
+    <main>
+        <!-- title screen -->
+        <section id="sidebar">
+            <h1><span>Rilakkuma</span><br>
+                Pick!
+            </h1>
+            
+            <section id="bento">
+                <section class="player">
+                    <h2>Player One</h2>
+                    <div class="player-name">
+                        <img src="images/rilakkuma.png" id="player-icon" alt="Rilakkuma.">
+                        <p>Rilakkuma</p>
+                    </div>
+                </section>
+                
+                <div id="time-score">
+                    <section>
+                        <h2>Timer</h2>
+                        <p>00:00</p>
+                    </section>
+
+                    <section>
+                        <h2>Score</h2>
+                        <p>000</p>
+                    </section>
+                </div>
+
+                <section id="key">
+                    <h2>Item Key</h2>
+
+                    <ul>
+                        <li><img src="images/rilakkuma.png" class="key-icon" alt="Rilakkuma.">Rilakkuma = 10 pts</li>
+                        <li><img src="images/orange.png" class="key-icon" alt="Orange.">Orange = 15 pts</li>
+                        <li><img src="images/chairoikoguma.png" class="key-icon" alt="Chairoikoguma.">Chairoikoguma = 20 pts</li>
+                        <li><img src="images/bee.png" class="key-icon" alt="Bee.">Bee = -10 pts</li>
+                    </ul>
+                </section>
+            </section>
+
+            <button id="quit"><i class="fas fa-chevron-left fa-xs"></i> Quit</button>
+        </section>
+
+
+        <section id="playmat">
+            <div id="title-screen">
+                <div id="title-text">
+                    <div id="title-characters">
+                        <img src="images/rilakkuma.png" alt="Rilakkuma.">
+                        <img src="images/korilakkuma.png" alt="Korilakkuma.">
+                    </div>
+
+                    <h1><span>Rilakkuma</span> vs. <span>Korilakkuma</span></h1>
+    
+                    <p>Test your reaction speed by clicking on the rapidly appearing items. Collect as many as you can to rack up points during the time limit! But look out, don’t touch the bees!</p>
+    
+                    <p id="title-tag"><i class="fas fa-exclamation-circle"></i> Rilakkuma goes first!</p>
+                </div>
+                
+                <button id="start">Let's Go!</button>
+            </div>
+<!-- 
+            <div id="play-game">
+                <div class="clock"></div>
+                <h1><span>Ready?</span></h1>
+                <button id="game-starts">Begin!</button>
+            </div> -->
+            
+        </section>
+
+
+
+        <section id="ending">
+            <h1><span>Rilakkuma</span><br>
+            is the winner!</h1>
+
+            <p>Rilakkuma won with x points!</p>
+            
+            <div id="results">
+                <section class="player">
+                    <h2>Player One</h2>
+    
+                    <div class="score-flex">
+                        <div class="player-name">
+                            <img src="images/rilakkuma.png" id="player-icon" alt="Rilakkuma.">
+                            <p>Rilakkuma</p>
+                        </div>
+    
+                        <p>000</p>
+                    </div>
+                    
+                </section>
+    
+                <section class="player">
+                    <h2>Player Two</h2>
+    
+                    <div class="score-flex">
+                        <div class="player-name">
+                            <img src="images/korilakkuma.png" id="player-icon" alt="Korilakkuma.">
+                            <p>Korilakkuma</p>
+                        </div>
+    
+                        <p>000</p>
+                    </div>
+                    
+    
+                    
+                </section>
+            </div>
+            
+
+            <button id="play-again">Play Again?</button>
+        </section>
+
+
+    </main>
+</body>
+
+
+</html>

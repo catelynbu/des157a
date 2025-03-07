@@ -1,0 +1,277 @@
+body{
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    color: #704436;
+}
+
+
+/* typography */
+span{
+    font-family: "Sacramento", cursive;
+    font-weight: 400;
+  
+}
+
+h1, h2, p{
+    margin: 0;
+}
+
+
+h2{
+    font-size: 1em;
+    margin-bottom: 8px;
+}
+
+li, p{
+    font-size: 1.3em;
+}
+
+
+main{
+    display: flex;
+    max-height: 100vh;
+    overflow: hidden;
+
+}
+
+
+/* buttons */
+button{
+    width: fit-content;
+    border-radius: 100px;
+    background-color: #704436;
+    font-size: 1.5em;
+    border: none;
+    color: white;
+    padding: 4px 24px;
+}
+
+
+button:hover{
+    cursor: pointer;
+}
+
+#start{
+    border-radius: 1000px;
+    padding: 50px 20px;
+    border: solid 4px #704436;
+    background-color: #F8DEDF;
+    color: #704436;
+}
+
+
+
+
+/* sidebar */
+#sidebar{
+    background-color: cadetblue;
+    width: 0vw;
+    padding: 40px;
+    height: 100vh;
+    transition: width 0.5s ease;
+
+    display: none;
+    flex-direction: column;
+    gap: 40px;
+    /* opacity: 0; */
+    /* flex: 0; */
+}
+
+#sidebar h1{
+    text-align: center;
+}
+
+#sidebar span{
+    font-size: 2em;
+}
+
+#bento{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.player, #key, #time-score section{
+    background-color: white;
+    padding: 20px;
+    border: solid 4px #704436;
+    border-radius: 20px;
+}
+
+.player{
+    text-align: left;
+}
+
+.player-name{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+#player-icon{
+    width: 50px;
+    height: auto;
+}
+
+#time-score{
+    display: flex;
+    gap: 24px;
+    
+}
+
+#time-score section{
+    width: 100%;
+}
+
+
+#key ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#key ul li{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.key-icon{
+    display: block;
+    width: 25px;
+    height: auto;
+}
+
+
+
+
+/* playmat */
+#playmat{
+    background-image: url(images/playmat.png);
+    margin: auto;
+    width: 55vw;
+    height: 55vw;
+    max-width: 800px;
+    max-height: 800px;
+    border: solid 5px #704436;
+    border-radius: 20px;
+    margin-top: 50px;
+    background-color: white;
+}
+
+
+
+/* title screen */
+#title-screen{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+#title-screen span{
+    font-size: 1.8em;
+    margin: 0 20px;
+}
+
+#title-screen p{
+    font-size: 1.3em;
+}
+
+#title-characters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 240px;
+}
+
+#title-text{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#title-tag{
+    border: #704436 solid 2px;
+    border-radius: 100px;
+    padding: 8px 12px;
+    width: fit-content;
+    margin: auto;
+    background-color: #f8dedf6c;
+}
+
+
+/* game starts */
+#play-game{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    height: 90%;
+}
+
+.clock{
+    background-image: url(images/clock.png);
+    width: 50px;
+    height: 50px;
+}
+
+#play-game span{
+    font-size: 2em;
+}
+
+
+
+/* ending screen */
+#ending{
+    display: none;
+
+    text-align: center;
+    flex-direction: column;
+    gap: 36px;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+}
+
+.score-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#ending .player{
+    width: 350px;
+}
+
+#ending span{
+    font-size: 3em;
+}
+
+#results{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+/* background patterns */
+.rilaBg{
+    background-color: #FCF6EC;
+    background-image: url(images/rila-bg.jpg);
+}
+
+.korila-bg{
+    background-color: #FCECED;
+    background-image: url(images/korila-bg.jpg);
+}
