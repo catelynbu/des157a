@@ -1,6 +1,7 @@
 body{
     font-family: "Comic Neue", cursive;
     font-weight: 400;
+    color: #704436;
     /* font-size: 1.5em; */
     /* padding: 60px; */
 }
@@ -41,7 +42,7 @@ button{
     font-size: 1.5em;
     border: none;
     color: white;
-    padding: 4px 20px;
+    padding: 4px 24px;
 }
 
 
@@ -76,14 +77,18 @@ button:hover{
     gap: 24px;
 }
 
-#player, #key, #time-score section{
+.player, #key, #time-score section{
     background-color: white;
     padding: 20px;
     border: solid 4px #704436;
     border-radius: 20px;
 }
 
-#player-name{
+.player{
+    text-align: left;
+}
+
+.player-name{
     display: flex;
     gap: 12px;
     align-items: center;
@@ -129,7 +134,7 @@ button:hover{
 
 
 #playmat{
-    
+    background-image: url(images/playmat.png);
     margin: auto;
     width: 630px;
     height: 630px;
@@ -141,4 +146,49 @@ button:hover{
 /* title screen */
 #title-screen{
     padding: 40px;
+}
+
+
+/* ending screen */
+#ending{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+}
+
+.score-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#ending .player{
+    width: 350px;
+}
+
+#ending span{
+    font-size: 3em;
+}
+
+#results{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+/* background patterns */
+.rila-bg{
+    background-color: #FCF6EC;
+    background-image: url(images/rila-bg.jpg);
+}
+
+.korila-bg{
+    background-color: #FCECED;
+    background-image: url(images/korila-bg.jpg);
 }
