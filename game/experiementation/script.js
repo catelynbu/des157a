@@ -5,24 +5,54 @@
     const myDiv = document.querySelector('div');
     const addimg = '<img src="images/korilakkuma.png" class="position" alt="Korilakkuma."></img>';
     const button = document.querySelector('button');
-    const images = document.querySelectorAll('img');
+    const images = document.querySelector('img');
     const korila = document.querySelector('.position');
 
 
-    const randomX = (Math.floor(Math.random()*(500-0)+1));
-    const randomY = (Math.floor(Math.random()*(500-0)+1));
+    const randomX = (Math.floor(Math.random()*(630-0)+1));
+    const randomY = (Math.floor(Math.random()*(630-0)+1));
+
+    let counter = 0;
 
     // myDiv.innerHTML = '<img src="images/korilakkuma.png" alt="Korilakkuma.">';
     
 
     button.addEventListener('click', function(){
-        korila.style.left = `${(Math.floor(Math.random()*(500-0)+1))}px`;
-        korila.style.bottom = `${(Math.floor(Math.random()*(500-0)+1))}px`;
-        // myDiv.innerHTML += addimg;
+        korila.style.left = `${(Math.floor(Math.random()*(630-0)+1))}px`;
+        korila.style.bottom = `${(Math.floor(Math.random()*(630-0)+1))}px`;
+        myDiv.innerHTML += addimg;
         
-        console.log(randomX);
+        // console.log(randomX);
         
     })
+
+    function spawnImg() {
+        korila.style.left = `${(Math.floor(Math.random()*(630-0)+1))}px`;
+        korila.style.bottom = `${(Math.floor(Math.random()*(630-0)+1))}px`;
+        // myDiv.innerHTML += addimg;
+      
+    }
+      
+    setInterval(spawnImg, 2000);
+
+    images.addEventListener('click', function(){
+        console.log('clicked');
+        // images.style.display ='none';
+        korila.style.left = `${(Math.floor(Math.random()*(630-0)+1))}px`;
+        korila.style.bottom = `${(Math.floor(Math.random()*(630-0)+1))}px`;
+
+        counter = counter + 15;
+        console.log(counter);
+    })
+
+    // button.addEventListener('click', function(){
+    //     korila.style.left = `${randomX}px`;
+    //     korila.style.bottom = `${randomY}px`;
+    //     // myDiv.innerHTML += addimg;
+        
+    //     console.log(randomX);
+        
+    // })
 
     // button.addEventListener('click' , random);
 
