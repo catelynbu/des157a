@@ -160,7 +160,11 @@ button:hover{
     border-radius: 20px;
     margin-top: 50px;
     background-color: white;
+    position: relative;
 }
+
+
+
 
 
 
@@ -210,7 +214,7 @@ button:hover{
 
 /* game starts */
 #play-game{
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 24px;
     justify-content: center;
@@ -228,6 +232,40 @@ button:hover{
 #play-game span{
     font-size: 2em;
 }
+
+#icons{
+    display: none;
+}
+
+.korila, .straw, .bee, .chai{
+    position: absolute;
+    left: 400px;
+    bottom: 400px;
+}
+
+/* .korila{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.straw{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.bee{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.chai{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+} */
 
 
 
