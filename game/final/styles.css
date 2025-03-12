@@ -2,6 +2,7 @@ body{
     font-family: "Comic Neue", cursive;
     font-weight: 400;
     color: #704436;
+    transition: all 0.5s ease;
 }
 
 
@@ -62,8 +63,8 @@ button:hover{
 
 
 
-/* sidebar */
-#sidebar{
+/* sidebars */
+#rila-sidebar, #korila-sidebar{
     background-color: cadetblue;
     width: 0vw;
     padding: 40px;
@@ -77,11 +78,12 @@ button:hover{
     /* flex: 0; */
 }
 
-#sidebar h1{
+
+#rila-sidebar h1, #korila-sidebar h1{
     text-align: center;
 }
 
-#sidebar span{
+#rila-sidebar span, #korila-sidebar span{
     font-size: 2em;
 }
 
@@ -213,7 +215,7 @@ button:hover{
 
 
 /* game starts */
-#play-game{
+#play-game, #next-game{
     display: none;
     flex-direction: column;
     gap: 24px;
@@ -229,7 +231,7 @@ button:hover{
     height: 50px;
 }
 
-#play-game span{
+#play-game span, #next-game span{
     font-size: 2em;
 }
 
@@ -237,35 +239,12 @@ button:hover{
     display: none;
 }
 
-.korila, .straw, .bee, .chai{
+.korila, .straw, .bee, .chai, .rila, .orange{
     position: absolute;
     left: 400px;
     bottom: 400px;
 }
 
-/* .korila{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-
-.straw{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-
-.bee{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-
-.chai{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-} */
 
 
 

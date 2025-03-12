@@ -67,5 +67,25 @@
             
     //       }
     // }
+
+
+    const timer = document.querySelector('.timer');
+
+    let time = 60;
+    const countdownTimer = setInterval(function() {
+        console.log(time);
+        time--;
+
+        timer.innerHTML = '0:' + time;
+
+        if (time < 10){
+            timer.innerHTML = '0:0' + time;
+        }
+
+        if (time === 0) {
+            clearInterval(countdownTimer);
+            console.log("Time's up!");
+        }
+    }, 1000);
     
 })();
