@@ -13,7 +13,7 @@
     const beginButton = document.querySelector('#game-starts');
 
     const nextRound = document.querySelector('#next-game');
-    const nextButton = document.querySelector('#next-player');
+    const nextButton = document.querySelector('.next-player');
 
     const seeResults = document.querySelector('#see-results');
     const resultsButton = document.querySelector('#see-results');

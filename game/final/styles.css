@@ -87,13 +87,13 @@ button:hover{
     font-size: 2em;
 }
 
-#bento{
+.bento{
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.player, #key, #time-score section{
+.player, .key, .time-score section{
     background-color: white;
     padding: 20px;
     border: solid 4px #704436;
@@ -110,23 +110,23 @@ button:hover{
     align-items: center;
 }
 
-#player-icon{
+.player-icon{
     width: 50px;
     height: auto;
 }
 
-#time-score{
+.time-score{
     display: flex;
     gap: 24px;
     
 }
 
-#time-score section{
+.time-score section{
     width: 100%;
 }
 
 
-#key ul{
+.key ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -135,7 +135,7 @@ button:hover{
     gap: 12px;
 }
 
-#key ul li{
+.key ul li{
     display: flex;
     align-items: center;
     gap: 8px;
@@ -231,7 +231,7 @@ button:hover{
     height: 50px;
 }
 
-#play-game span, #next-game span{
+#play-game span, #next-game span, #see-results{
     font-size: 2em;
 }
 
