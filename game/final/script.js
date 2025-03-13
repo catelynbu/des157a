@@ -8,10 +8,15 @@
     const rilaSidebar = document.querySelector('#rila-sidebar');
     const korilaSidebar = document.querySelector('#korila-sidebar')
     const background = document.querySelector('body');
+
     const beginRound = document.querySelector('#play-game');
     const beginButton = document.querySelector('#game-starts');
+
     const nextRound = document.querySelector('#next-game');
     const nextButton = document.querySelector('#next-player');
+
+    const seeResults = document.querySelector('#see-results');
+    const resultsButton = document.querySelector('#see-results');
 
 
     const icons = document.querySelector('#icons');
@@ -32,7 +37,7 @@
 
      // Start the first round timer
      function startTimer() {
-        time = 10;  // Reset time
+        time = 30;  // Reset time
         countdownInterval = setInterval(function() {
             time--;
             updateTimerDisplay(time);
@@ -59,6 +64,7 @@
     let counter1 = 0;
     let counter2 = 0;
     const score = document.querySelector('.score');
+    const score2 = document.querySelector('.score2');
 
     startButton.addEventListener('click', function(){
         const bgmusic = new Audio('audio/bgmusic.mp3');
@@ -97,9 +103,11 @@
 
             startTimer();
             
+
+            //change this value to howver long the timer is
             setTimeout (function(){
                 nextRound.style.display = 'flex';
-            }, 10000)
+            }, 30000)
 
            
             
@@ -184,6 +192,35 @@
             clearInterval(countdownInterval);  // Clear previous timer interval
             startTimer();
 
+            for (let i=0; i<bee.length; i++){
+                bee[i].addEventListener('click', function(){
+                    console.log('bee clicked');
+                    bee[i].style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+                    bee[i].style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+            
+                    counter2 = counter2 - 15;
+                    console.log(counter2);
+                    score2.innerHTML = `${counter2}`;
+
+                    
+                })
+            }
+            
+        
+            for (let i=0; i<chai.length; i++){
+                chai[i].addEventListener('click', function(){
+                    console.log('chairoigokuma clicked');
+                    chai[i].style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+                    chai[i].style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+            
+                    counter2 = counter2 + 20;
+                    console.log(counter2);
+                    score2.innerHTML = `${counter2}`;
+
+                    collectSound.play();
+                })
+            }
+
            
 
             korila.addEventListener('click', function(){
@@ -192,9 +229,9 @@
                 korila.style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
                 korila.style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
         
-                counter1 = counter1 + 10;
-                console.log(counter1);
-                score.innerHTML = `${counter1}`;
+                counter2 = counter2 + 10;
+                console.log(counter2);
+                score2.innerHTML = `${counter2}`;
 
                 collectSound.play();
             })
@@ -204,18 +241,45 @@
                 strawberry.style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
                 strawberry.style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
         
-                counter1 = counter1 + 15;
-                console.log(counter1);
-                score.innerHTML = `${counter1}`;
+                counter2 = counter2 + 15;
+                console.log(counter2);
+                score2.innerHTML = `${counter2}`;
 
                 collectSound.play();
             })
 
         }, 2000)
 
-        
+         //change this value to howver long the timer is
+         setTimeout (function(){
+            seeResults.style.display = 'flex';
+            icons2.style.display ='none';
+        }, 30000)
+
+    })
+
+
+    resultsButton.addEventListener('click', function(){
+        document.querySelector('#playmat').style.display = 'none';
+        korilaSidebar.style.display = 'none';
         
 
+        document.querySelector('#ending').style.display = 'flex';
+        document.querySelector('#rilaScore').innerHTML = counter1;
+        document.querySelector('#korilaScore').innerHTML = counter2;
+
+        if(counter1 < counter2){
+            console.log('korilakkuma wins')
+            document.querySelector('#winner').innerHTML = 'Korilakkuma'
+            document.querySelector('#winnerScore').innerHTML = `Korilakkuma won with ${counter2} points!`
+            document.querySelector('#results').style.flexDirection = 'column-reverse';
+        }
+        else{
+            console.log('rillakkuma wins')
+            background.style.backgroundImage = 'url(images/rila-bg.jpg)';
+            document.querySelector('#winnerScore').innerHTML = `Rilakkuma won with ${counter1} points!`
+            
+        }
     })
 
 
@@ -268,74 +332,74 @@
 
     function spawnChai (){
         for (let i=0; i<chai.length; i++){
-            chai.style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
-            chai.style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+            chai[i].style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+            chai[i].style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
         }
         
     }
 
-    function spawnsClick(){
-        korila.addEventListener('click', function(){
-            console.log('korila clicked');
+    // function spawnsClick(){
+    //     korila.addEventListener('click', function(){
+    //         console.log('korila clicked');
            
-            korila.style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
-            korila.style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+    //         korila.style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+    //         korila.style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
     
-            counter1 = counter1 + 10;
-            console.log(counter1);
-            score.innerHTML = `${counter1}`;
-        })
+    //         counter1 = counter1 + 10;
+    //         console.log(counter1);
+    //         score.innerHTML = `${counter1}`;
+    //     })
     
-        strawberry.addEventListener('click', function(){
-            console.log('strawberry clicked');
-            strawberry.style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
-            strawberry.style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+    //     strawberry.addEventListener('click', function(){
+    //         console.log('strawberry clicked');
+    //         strawberry.style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+    //         strawberry.style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
     
-            counter1 = counter1 + 15;
-            console.log(counter1);
-            score.innerHTML = `${counter1}`;
-        })
+    //         counter1 = counter1 + 15;
+    //         console.log(counter1);
+    //         score.innerHTML = `${counter1}`;
+    //     })
     
-        bee.addEventListener('click', function(){
-            console.log('bee clicked');
-            bee.style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
-            bee.style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+    //     bee.addEventListener('click', function(){
+    //         console.log('bee clicked');
+    //         bee.style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+    //         bee.style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
     
-            counter1 = counter1 - 15;
-            console.log(counter1);
-            score.innerHTML = `${counter1}`;
-        })
+    //         counter1 = counter1 - 15;
+    //         console.log(counter1);
+    //         score.innerHTML = `${counter1}`;
+    //     })
     
-        chai.addEventListener('click', function(){
-            console.log('chairoigokuma clicked');
-            chai.style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
-            chai.style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+    //     chai.addEventListener('click', function(){
+    //         console.log('chairoigokuma clicked');
+    //         chai.style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+    //         chai.style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
     
-            counter1 = counter1 + 20;
-            console.log(counter1);
-            score.innerHTML = `${counter1}`;
-        })
+    //         counter1 = counter1 + 20;
+    //         console.log(counter1);
+    //         score.innerHTML = `${counter1}`;
+    //     })
 
-        rila.addEventListener('click', function(){
-            console.log('rila clicked');
+    //     rila.addEventListener('click', function(){
+    //         console.log('rila clicked');
            
-            rila.style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
-            rila.style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+    //         rila.style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+    //         rila.style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
     
-            counter1 = counter1 + 10;
-            console.log(counter1);
-            score.innerHTML = `${counter1}`;
-        })
+    //         counter1 = counter1 + 10;
+    //         console.log(counter1);
+    //         score.innerHTML = `${counter1}`;
+    //     })
     
-        orange.addEventListener('click', function(){
-            console.log('orange clicked');
-            orange.style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
-            orange.style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+    //     orange.addEventListener('click', function(){
+    //         console.log('orange clicked');
+    //         orange.style.left = `${(Math.floor(Math.random()*(610-0)+1))}px`;
+    //         orange.style.bottom = `${(Math.floor(Math.random()*(610-0)+1))}px`;
     
-            counter1 = counter1 + 15;
-            console.log(counter1);
-            score.innerHTML = `${counter1}`;
-        })
-    }
+    //         counter1 = counter1 + 15;
+    //         console.log(counter1);
+    //         score.innerHTML = `${counter1}`;
+    //     })
+    // }
 
 })();

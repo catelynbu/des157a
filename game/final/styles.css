@@ -215,7 +215,7 @@ button:hover{
 
 
 /* game starts */
-#play-game, #next-game{
+#play-game, #next-game, #see-results{
     display: none;
     flex-direction: column;
     gap: 24px;
